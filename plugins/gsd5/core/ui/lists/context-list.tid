@@ -1,3 +1,5 @@
 title: $:/plugins/gsd5/core/ui/lists/context-list
+tags: $:/tags/GSD5Lists 
+Caption: Contexts
 
 <<gsd5-list title:"Contexts" gsd_type:"context" realmAware:"true" sort:"title" order:"ascending" groupBy:"none" customFilter:"none">>
