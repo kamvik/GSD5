@@ -1,18 +1,18 @@
 title: $:/plugins/gsd5/core/ui/lists/realm-list
 
-<div class="tw-menu-list-item">
-  Realm
+<div class="tc-menu-list-item gsd-realm-list">
+  Realm:
   <$linkcatcher set="$:/currentRealm" setTo="all">
-    <div class="tw-menu-list-subitem">
-      <$reveal state="$:/currentRealm" type="match" text="all">&bull;</$reveal>
+    <div class="tc-menu-list-subitem">
+      <$reveal state="$:/currentRealm" type="match" text="all">{{$:/plugins/gsd5/core/images/globe}}</$reveal>
       <$reveal state="$:/currentRealm" type="nomatch" text="all">&nbsp;&nbsp;</$reveal>
       <$link to="">&nbsp;all</$link>
     </div>
   </$linkcatcher>
   <$linkcatcher to="$:/currentRealm">
     <$list filter="[field:gsd_type[realm]]">
-      <div class="tw-menu-list-subitem">
-        <$reveal state="$:/currentRealm" type="match" text={{!!title}}>&bull;</$reveal>
+      <div class="tc-menu-list-subitem">
+        <$reveal state="$:/currentRealm" type="match" text={{!!title}}>{{$:/plugins/gsd5/core/images/globe}}</$reveal>
         <$reveal state="$:/currentRealm" type="nomatch" text={{!!title}}>&nbsp;&nbsp;</$reveal>
         <$link to={{!!title}}>&nbsp;<$view field="title" format="text"/></$link>
       </div>
