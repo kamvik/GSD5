@@ -10,20 +10,20 @@ $(currentTiddler)$-toggle
         <$set name="parentTiddler" value=<<currentTiddler>>>
         <$set name="ContextStatus" value=<<qualify "$:/state/popup/context">>>
             <$button popup=<<ContextStatus>> class="tc-btn-invisible gsd-context-button">+ Contexts</$button>
-            <$reveal state=<<ContextStatus>> type="nomatch" text="" class="tc-popup-handle" default="" retain="yes" animate="yes">
-            <div class="tc-menu-list-subitem">
+                 <$reveal state=<<ContextStatus>> type="nomatch" text="" class="tc-popup-handle" default="" retain="yes" animate="yes">
+                       <div class="tc-menu-list-item">
 
-			<$list filter="[field:gsd_type[context]field:gsd_realm{!!gsd_realm}] [field:gsd_type[context]field:gsd_realm[all]]" emptyMessage="<em>-no contexts-</em>">
-				<div class="tc-menu-list-subitem">
-				<$checkbox tiddler=<<parentTiddler>> tag=<<currentTiddler>>>
-					<<currentTiddler>>
-				</$checkbox>
-				</div>
-			</$list>
+			     <$list filter="[field:gsd_type[context]field:gsd_realm{!!gsd_realm}] [field:gsd_type[context]field:gsd_realm[all]]" emptyMessage="<em>-no contexts-</em>">
+				   <div class="tc-menu-list-subitem">
+				         <$checkbox tiddler=<<parentTiddler>> tag=<<currentTiddler>>>
+					         <<currentTiddler>>
+				         </$checkbox>
+				   </div>
+			      </$list>
 
 			</div>
-			</$reveal>
-		</$set>
+		</$reveal>
+	</$set>
         </$set>
     </div>
 </p>
